@@ -83,3 +83,5 @@ The solution is modelled around the following classes:
 - `World` intentionally does not expose `maxX`/`maxY` — neither `Robot` nor `RobotController` need to know the grid dimensions; boundary checking is encapsulated within `World` and `WorldState`.
 
 - Multiple robots may occupy the same position simultaneously; the spec places no restriction on this.
+
+- The `Command` interface makes the instruction set extensible — new commands can be added by implementing the interface without touching existing code. That said, commands are still coupled to a `Robot` and `WorldState`, so they are not general-purpose; they operate within the assumption of a robot moving through a grid world.
