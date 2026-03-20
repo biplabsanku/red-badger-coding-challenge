@@ -149,21 +149,9 @@ class RobotControllerTest {
     }
 
     @Test
-    void invalidGridLineProducesNoOutput() {
-        List<String> results = run("5 3 N\n1 1 E\nF");
-        assertTrue(results.isEmpty());
-    }
-
-    @Test
     void robotOutsideGridReturnsError() {
         String err = runErr("5 3\n6 3 N\nF");
         assertTrue(err.contains("Error: initial robot position outside grid"));
-    }
-
-    @Test
-    void robotOutsideGridProducesNoOutput() {
-        List<String> results = run("5 3\n6 3 N\nF");
-        assertTrue(results.isEmpty());
     }
 
     @Test

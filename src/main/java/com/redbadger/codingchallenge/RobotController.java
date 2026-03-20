@@ -9,8 +9,8 @@ public class RobotController {
         new RobotController().run(scanner);
     }
 
-    private static final Pattern GRID_PATTERN = Pattern.compile("\\d+ \\d+");
-    private static final Pattern POSITION_PATTERN = Pattern.compile("\\d+ \\d+ [NSEW]");
+    private static final Pattern GRID_PATTERN = Pattern.compile("\\d+\\s+\\d+");
+    private static final Pattern POSITION_PATTERN = Pattern.compile("\\d+\\s+\\d+\\s+[NSEW]");
     private static final Pattern INSTRUCTIONS_PATTERN = Pattern.compile("[LRF]+");
 
     private static final Command LEFT_COMMAND = new LeftCommand();
